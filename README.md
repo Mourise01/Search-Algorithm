@@ -19,12 +19,50 @@ To write a program to perform linear search and binary search using python progr
 ## Program:
 i)	#Use a linear search method to match the item in a list.
 ```
+Program for linear search method to match the item in a list
+Developed by:mourise jane S
+RegisterNumber: 22009459
+'''
+def linearSearch(n,k):
+    if k in n:
+       n.sort()
+       a=n.index(k)
+       print(n)
+       print("Element found at index:  {}".format(a))
+    else:
+       n.sort()
+       print(n)
+       print("Element not found")
+n=eval(input())
+k=int(input())
 
+linearSearch(n,k)
 
 
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
+def binarySearchIter(array, k, low, high):
+    while low <=high:
+        mid = low + (high-low)//2
+        if array[mid]==k:
+            return mid
+        elif array[mid]<k:
+            low = mid +1
+        else:
+            high=mid-1
+    return -1
+    
+array = eval(input())
+array.sort()
+k = eval(input())
+result=binarySearchIter(array,k,0,len(array)-1)
+if (result==-1):
+    print(array)
+    print("Element not found")
+else:
+    print(array)
+    print("Element found at index: ",result)
 
 
 
@@ -33,6 +71,29 @@ ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
+def binarySearchIter(array, k, low, high):
+    while low <=high:
+        mid = low + (high-low)//2
+        if array[mid]==k:
+            return mid
+        elif array[mid]<k:
+            low=mid +1
+        else:
+            high=mid-1
+    return -1
+array = eval(input())
+array.sort()
+k = eval(input())
+result=binarySearchIter(array,k,0,len(array)-1)
+if (result==-1):
+    print(array)
+    print("Element not found")
+else:
+    print(array)
+    print("Element found at index: ",result)
+
+
+
 
 
 
@@ -40,6 +101,10 @@ iii)	# Find the element in a list using Binary Search (recursive Method).
 
 ```
 ## Sample Input and Output
+![search 1](https://user-images.githubusercontent.com/119560349/215334713-21c5c2e7-1427-4ea8-805e-1d7939d344b5.png)
+![search 2](https://user-images.githubusercontent.com/119560349/215334748-345dae2d-6b4f-41df-928d-c63df98d1d9d.png)
+![search 3](https://user-images.githubusercontent.com/119560349/215334776-8dd8f29e-0f97-4054-8b28-8b5d98e4f6e3.png)
+
 
 
 
